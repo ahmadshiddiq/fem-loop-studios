@@ -9,18 +9,28 @@
   font-family: "Alata", sans-serif;
   font-weight: 400;
 }
-
 .josefin {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
 }
 
 /* Custom css begin! */
-
+header {
+  background-image: url("images/mobile/image-hero.jpg");
+}
 .logo img {
   width: 9rem;
 }
-
 .hamburger img {
   width: 1.5rem;
+}
+
+/* Leaving mobile mode */
+@media (min-width: 40rem) {
+  header {
+    background-image: url("images/desktop/image-hero.jpg");
+  }
+  .logo img {
+    width: 12rem;
+  }
 }
