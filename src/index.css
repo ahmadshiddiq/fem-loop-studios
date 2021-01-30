@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+
+* {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+
+.josefin {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+/* Custom css begin! */
+
+.logo img {
+  width: 9rem;
+}
+
+.hamburger img {
+  width: 1.5rem;
+}
