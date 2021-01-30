@@ -1,6 +1,5 @@
 import logo from "../images/logo.svg";
 import hamburger from "../images/icon-hamburger.svg";
-import backgroundHero from "../images/mobile/image-hero.jpg";
 
 const Header = () => {
   return (
