@@ -24,6 +24,9 @@ header {
 .hamburger img {
   width: 1.5rem;
 }
+.about-image {
+  background-image: url("images/mobile/image-interactive.jpg");
+}
 
 /* Leaving mobile mode */
 @media (min-width: 40rem) {
@@ -33,4 +36,12 @@ header {
   .logo img {
     width: 12rem;
   }
+  /* .about-image {
+    grid-column: 1/8;
+    grid-row: 1;
+  }
+  .about-text {
+    grid-column: 6/12;
+    grid-row: 1;
+  } */
 }

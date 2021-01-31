@@ -29,9 +29,9 @@ const Header = () => {
         {/* Hero */}
         <div className="mt-40">
           <div className="border-2 w-full p-6 md:w-8/12 lg:w-5/12">
-            <p className="josefin text-4xl text-white uppercase md:text-5xl">
+            <h1 className="josefin text-4xl text-white uppercase md:text-5xl">
               Immersive experiences that deliver
-            </p>
+            </h1>
           </div>
         </div>
       </div>
