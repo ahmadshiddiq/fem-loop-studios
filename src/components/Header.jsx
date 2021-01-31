@@ -12,7 +12,7 @@ const Header = () => {
           </div>
 
           {/* menu */}
-          <div className="hidden md:block flex flex-row space-x-8 text-white">
+          <div className="hidden flex-row space-x-8 text-white md:flex">
             <a href="#about">About</a>
             <a href="#careers">Careers</a>
             <a href="#events">Events</a>
@@ -28,8 +28,8 @@ const Header = () => {
 
         {/* Hero */}
         <div className="mt-40">
-          <div className="border-2 w-full p-6 lg:w-5/12">
-            <p className="josefin text-4xl md:text-6xl lg:text-7xl text-white uppercase">
+          <div className="border-2 w-full p-6 md:w-8/12 lg:w-5/12">
+            <p className="josefin text-4xl text-white uppercase md:text-5xl">
               Immersive experiences that deliver
             </p>
           </div>
