@@ -9,6 +9,13 @@
   font-family: "Alata", sans-serif;
   font-weight: 400;
 }
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .josefin {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
@@ -18,13 +25,22 @@
 header {
   background-image: url("images/mobile/image-hero.jpg");
 }
-.logo img {
+
+#logo img {
   width: 9rem;
 }
-.hamburger img {
+
+#hamburger img {
   width: 1.5rem;
 }
-.about-image {
+
+#hero h1 {
+  font-size: 2.5rem;
+  line-height: 2.25rem;
+}
+
+#about-image {
+  height: 14rem;
   background-image: url("images/mobile/image-interactive.jpg");
 }
 
@@ -33,15 +49,18 @@ header {
   header {
     background-image: url("images/desktop/image-hero.jpg");
   }
-  .logo img {
+
+  #logo img {
     width: 12rem;
   }
-  /* .about-image {
-    grid-column: 1/8;
-    grid-row: 1;
+
+  #hero h1 {
+    font-size: 3.5rem;
+    line-height: 1;
   }
-  .about-text {
-    grid-column: 6/12;
-    grid-row: 1;
-  } */
+
+  #about-image {
+    height: 31rem;
+    background-image: url("images/desktop/image-interactive.jpg");
+  }
 }
