@@ -26,6 +26,7 @@ header {
 }
 .about-image {
   background-image: url("images/mobile/image-interactive.jpg");
+  height: 15rem;
 }
 
 /* Leaving mobile mode */
@@ -36,12 +37,18 @@ header {
   .logo img {
     width: 12rem;
   }
-  /* .about-image {
-    grid-column: 1/8;
-    grid-row: 1;
+  .about-image {
+    background-image: url("images/desktop/image-interactive.jpg");
+    height: 31.25rem;
   }
   .about-text {
-    grid-column: 6/12;
-    grid-row: 1;
-  } */
+    height: 19rem;
+    align-self: end;
+    padding-top: 5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }

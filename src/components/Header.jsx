@@ -4,7 +4,7 @@ import hamburger from "../images/icon-hamburger.svg";
 const Header = () => {
   return (
     <header className="bg-center bg-cover">
-      <div className="pt-10 pb-56 px-6 lg:pt-16 lg:pb-36 lg:px-40">
+      <div className="container mx-auto pt-10 pb-56 px-6 lg:pt-16 lg:pb-36 lg:px-40">
         <nav className="flex justify-between items-center">
           {/* logo */}
           <div className="logo">
