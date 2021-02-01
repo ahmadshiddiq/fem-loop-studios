@@ -39,6 +39,11 @@ header {
   line-height: 2.25rem;
 }
 
+#about-image {
+  height: 14rem;
+  background-image: url("images/mobile/image-interactive.jpg");
+}
+
 .product-item:nth-child(1) {
   background-image: url("images/mobile/image-deep-earth.jpg");
 }
