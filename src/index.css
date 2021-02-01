@@ -39,9 +39,36 @@ header {
   line-height: 2.25rem;
 }
 
-#about-image {
-  height: 14rem;
-  background-image: url("images/mobile/image-interactive.jpg");
+.product-item:nth-child(1) {
+  background-image: url("images/mobile/image-deep-earth.jpg");
+}
+
+.product-item:nth-child(2) {
+  background-image: url("images/mobile/image-night-arcade.jpg");
+}
+
+.product-item:nth-child(3) {
+  background-image: url("images/mobile/image-soccer-team.jpg");
+}
+
+.product-item:nth-child(4) {
+  background-image: url("images/mobile/image-grid.jpg");
+}
+
+.product-item:nth-child(5) {
+  background-image: url("images/mobile/image-from-above.jpg");
+}
+
+.product-item:nth-child(6) {
+  background-image: url("images/mobile/image-pocket-borealis.jpg");
+}
+
+.product-item:nth-child(7) {
+  background-image: url("images/mobile/image-curiosity.jpg");
+}
+
+.product-item:nth-child(8) {
+  background-image: url("images/mobile/image-fisheye.jpg");
 }
 
 /* Leaving mobile mode */
