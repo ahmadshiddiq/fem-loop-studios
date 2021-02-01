@@ -18,15 +18,15 @@
 header {
   background-image: url("images/mobile/image-hero.jpg");
 }
-.logo img {
+#logo img {
   width: 9rem;
 }
-.hamburger img {
+#hamburger img {
   width: 1.5rem;
 }
-.about-image {
-  background-image: url("images/mobile/image-interactive.jpg");
-  height: 15rem;
+#hero h1 {
+  font-size: 2.5rem;
+  line-height: 2.25rem;
 }
 
 /* Leaving mobile mode */
@@ -34,21 +34,11 @@ header {
   header {
     background-image: url("images/desktop/image-hero.jpg");
   }
-  .logo img {
+  #logo img {
     width: 12rem;
   }
-  .about-image {
-    background-image: url("images/desktop/image-interactive.jpg");
-    height: 31.25rem;
-  }
-  .about-text {
-    height: 19rem;
-    align-self: end;
-    padding-top: 5rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  #hero h1 {
+    font-size: 3.5rem;
+    line-height: 1;
   }
 }
