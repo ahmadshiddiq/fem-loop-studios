@@ -1,3 +1,30 @@
+/* Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+
+/* Style */
+* {
+  font-family: "Alata", sans-serif;
+  font-weight: 300;
+}
+
+.josefin {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+header {
+  background-image: url("./images/mobile/image-hero.jpg");
+}
+
+/* Media query */
+@media (max-width: 640px) {
+  header {
+    background-image: url("./images/mobile/image-hero.jpg");
+  }
+}
