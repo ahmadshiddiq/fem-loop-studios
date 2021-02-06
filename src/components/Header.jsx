@@ -4,8 +4,8 @@ import Hero from "./Hero";
 const Header = () => {
   return (
     <header className="bg-cover bg-center">
-      <div className="container pt-10 pb-56 px-6">
-        <Nav />
+      <Nav />
+      <div className="container pb-96 px-6 pt-40">
         <Hero />
       </div>
     </header>
