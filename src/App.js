@@ -4,6 +4,11 @@ import logo from "./images/logo.svg";
 import hamburger from "./images/icon-hamburger.svg";
 import close from "./images/icon-close.svg";
 
+import facebook from "./images/icon-facebook.svg";
+import twitter from "./images/icon-twitter.svg";
+import pinterest from "./images/icon-pinterest.svg";
+import instagram from "./images/icon-instagram.svg";
+
 const pages = [
   {
     title: "About",
@@ -179,6 +184,41 @@ function App() {
           </div>
         </section>
       </main>
+
+      {/* Pake grid disini */}
+      <footer className="bg-black text-white">
+        <div className="grid text-center py-14">
+          <div className="flex justify-center">
+            <img src={logo} alt="Loopstudios" className="h-6" />
+          </div>
+          <div className="flex flex-col space-y-4 mt-6 mb-10">
+            {pages.map((page, index) => (
+              <a key={index} href={page.link}>
+                {page.title}
+              </a>
+            ))}
+          </div>
+          <div className="flex space-x-4 justify-center">
+            <a href="#/">
+              <img src={facebook} alt="Facebook" />
+            </a>
+            <a href="#/">
+              <img src={twitter} alt="Facebook" />
+            </a>
+            <a href="#/">
+              <img src={pinterest} alt="Facebook" />
+            </a>
+            <a href="#/">
+              <img src={instagram} alt="Facebook" />
+            </a>
+          </div>
+          <div className="mt-4">
+            <span className="text-gray-500 text-sm">
+              &copy; 2021 Loopstudios. All rights reserved.
+            </span>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
