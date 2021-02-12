@@ -22,6 +22,10 @@ header {
   background-image: url("./images/mobile/image-hero.jpg");
 }
 
+#about-image {
+  background-image: url("./images/mobile/image-interactive.jpg");
+}
+
 /* Media query */
 @media (max-width: 640px) {
 }
