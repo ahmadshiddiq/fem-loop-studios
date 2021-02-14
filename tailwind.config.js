@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      spacing: {
+        87: "87%",
+      },
       backgroundImage: (theme) => ({
         // Mobile size
         "product-sm-1": "url('./images/mobile/image-deep-earth.jpg')",

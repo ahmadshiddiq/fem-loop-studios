@@ -86,7 +86,11 @@ function App() {
     <>
       <header className="bg-center bg-cover">
         <div className="px-6 pt-10 pb-56">
-          <div className="relative flex items-center justify-between z-10">
+          <div
+            className={`${
+              toggle ? "w-87 fixed" : "relative"
+            } flex items-center justify-between z-30`}
+          >
             <div className="h-6">
               <a href="/">
                 <img src={logo} alt="Loopstudios" className="h-full" />
@@ -111,7 +115,7 @@ function App() {
           <div
             className={`${
               toggle ? "block" : "hidden"
-            } absolute bg-black top-0 bottom-0 left-0 right-0`}
+            } fixed bg-black top-0 bottom-0 left-0 right-0 z-20`}
           >
             <div className="flex items-center h-full">
               <div className="flex flex-col space-y-4 px-6 text-white">
