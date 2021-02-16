@@ -5,8 +5,12 @@ module.exports = {
     extend: {
       spacing: {
         87: "87%",
+        512: "32rem",
       },
       backgroundImage: (theme) => ({
+        // Others
+        "header-sm": "url('./images/mobile/image-hero.jpg')",
+        "header-lg": "url('./images/desktop/image-hero.jpg')",
         // Mobile size
         "product-sm-1": "url('./images/mobile/image-deep-earth.jpg')",
         "product-sm-2": "url('./images/mobile/image-night-arcade.jpg')",
