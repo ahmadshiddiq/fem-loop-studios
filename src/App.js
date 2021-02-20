@@ -84,26 +84,30 @@ function App() {
 
   return (
     <>
-      <header className="bg-header-sm bg-center bg-cover lg:bg-header-lg">
-        <div className="px-6 pt-10 pb-56 lg:px-40 lg:pt-16 lg:pb-36">
+      <header className="relative bg-center bg-cover bg-header-sm md:bg-header-md">
+        <div className="px-6 pt-10 pb-56 md:px-20 md:pb-32 lg:px-40 lg:pt-16 lg:pb-36">
+          {/* Navigation */}
           <div
             className={`${
               toggle ? "w-87 fixed" : "relative"
-            } flex items-center justify-between z-30`}
+            } items-center flex  justify-between z-30`}
           >
+            {/* logo */}
             <div className="h-6 lg:h-8">
               <a href="/">
                 <img src={logo} alt="Loopstudios" className="h-full" />
               </a>
             </div>
 
-            <div className="h-6 w-6 flex items-center justify-center md:hidden">
+            {/* Hamburger button */}
+            <div className="flex items-center justify-center w-6 h-6 md:hidden">
               <button className="focus:outline-none" onClick={handleToggle}>
                 <img src={`${toggle ? close : hamburger}`} alt="Hamburger" />
               </button>
             </div>
 
-            <div className="hidden space-x-5 md:block text-white">
+            {/* Menu */}
+            <div className="hidden space-x-5 text-white md:block">
               {pages.map((page, index) => (
                 <a key={index} href={page.link}>
                   {page.title}
@@ -112,15 +116,16 @@ function App() {
             </div>
           </div>
 
+          {/* Mobile menu on active toggle */}
           <div
             className={`${
               toggle ? "block" : "hidden"
-            } fixed bg-black top-0 bottom-0 left-0 right-0 z-20`}
+            } fixed bg-black inset-0 z-20`}
           >
             <div className="flex items-center h-full">
-              <div className="flex flex-col space-y-4 px-6 text-white">
+              <div className="flex flex-col px-6 space-y-4 text-white">
                 {pages.map((page, index) => (
-                  <a key={index} href={page.link} className="josefin text-2xl">
+                  <a key={index} href={page.link} className="text-2xl josefin">
                     {page.title}
                   </a>
                 ))}
@@ -128,23 +133,27 @@ function App() {
             </div>
           </div>
 
-          <div className="mt-40 p-6 border-2 border-white lg:w-7/12 lg:p-9">
-            <h1 className="josefin text-4xl text-white lg:text-6xl">
+          {/* Hero */}
+          <div className="relative z-10 p-6 mt-40 border-2 border-white md:mt-32 lg:w-7/12 lg:p-9">
+            <h1 className="text-4xl text-white josefin lg:text-6xl">
               Immersive experiences that deliver
             </h1>
           </div>
         </div>
+
+        {/* Filter to darking background */}
+        <div className="absolute inset-0 z-0 bg-black opacity-40"></div>
       </header>
 
-      <main className="px-6 lg:px-40">
-        <section className="grid gap-y-12 py-24 lg:grid-cols-12 lg:gap-5">
+      <main className="px-6 lg:px-40 md:px-20">
+        <section className="grid py-24 gap-y-12 lg:grid-cols-12 lg:gap-5">
           <div
             id="about-image"
-            className="bg-center bg-cover w-full h-56 lg:row-start-1 lg:col-start-1 lg:col-end-8 lg:h-512"
+            className="w-full h-56 bg-center bg-cover lg:row-start-1 lg:col-start-1 lg:col-end-9 lg:h-512"
           ></div>
           <div className="text-center lg:row-start-1 lg:col-start-7 lg:col-end-13 lg:text-left lg:flex">
             <div className="lg:self-end lg:bg-white lg:pt-20 lg:pl-20">
-              <h2 className="josefin text-3xl mb-8 lg:text-5xl lg:mb-8">
+              <h2 className="mb-8 text-3xl md:mb-4 josefin lg:text-5xl lg:mb-8">
                 The leader in interactive VR
               </h2>
               <p className="text-gray-500">
@@ -160,22 +169,23 @@ function App() {
         {/* Mobile Products */}
         <section className="pt-2 pb-24 lg:hidden">
           <div>
-            <h2 className="josefin text-center text-3xl">Our Creations</h2>
+            <h2 className="text-3xl text-center josefin">Our Creations</h2>
           </div>
-          <div className="flex flex-col space-y-7 pt-14 pb-10">
+          <div className="flex flex-col pb-10 space-y-7 pt-14">
             {products.map((product, index) => (
               <div
-                className={`h-32 w-full bg-product-sm-${
+                className={`h-32 w-full bg-product-mobile-${
                   index + 1
                 } bg-cover bg-center relative`}
               >
-                <div className="w-3/5 flex items-end h-full">
+                <div className="flex items-end w-3/5 h-full">
                   <div className="p-6">
-                    <h3 className="josefin text-white text-2xl z-10 relative">
+                    <h3 className="relative z-10 text-2xl leading-7 text-white josefin">
                       {product.title}
                     </h3>
                   </div>
                 </div>
+
                 <div className="absolute inset-0 bg-gradient-to-r from-gray-900"></div>
               </div>
             ))}
@@ -183,7 +193,7 @@ function App() {
           <div className="text-center">
             <a
               href="/#"
-              className="text-lg uppercase border-2 border-black py-3 px-12 tracking-widest"
+              className="inline-block px-12 py-3 text-lg tracking-widest uppercase border-2 border-black"
             >
               See All
             </a>
@@ -193,10 +203,10 @@ function App() {
         {/* Desktop Products */}
         <section className="hidden lg:block lg:mb-44">
           <div className="flex items-center justify-between mb-20">
-            <h2 className="josefin text-3xl">Our Creations</h2>
+            <h2 className="text-3xl josefin">Our Creations</h2>
             <a
               href="/#"
-              className="text-lg uppercase border-2 border-black py-3 px-12 tracking-widest inline-block"
+              className="inline-block px-12 py-2 text-lg tracking-widest uppercase border-2 border-black hover:bg-black hover:text-white"
             >
               See All
             </a>
@@ -205,18 +215,19 @@ function App() {
             <div className="grid grid-cols-4 gap-7">
               {products.map((product, index) => (
                 <div
-                  className={`h-96 w-full bg-product-lg-${
+                  className={`h-448 w-full bg-product-desktop-${
                     index + 1
                   } bg-cover bg-center relative`}
                 >
                   <div className="flex items-end h-full">
                     <div className="p-6">
-                      <h3 className="josefin text-white text-3xl z-10 relative">
+                      <h3 className="relative z-10 text-3xl leading-7 text-white josefin">
                         {product.title}
                       </h3>
                     </div>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-800"></div>
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent"></div>
                 </div>
               ))}
             </div>
@@ -224,13 +235,13 @@ function App() {
         </section>
       </main>
 
-      <footer className="bg-black text-white">
+      <footer className="text-white bg-black">
         <div className="grid text-center py-14 lg:grid-cols-2 lg:px-40 lg:gap-y-8">
           <div className="flex justify-center lg:justify-start">
             <img src={logo} alt="Loopstudios" className="h-6" />
           </div>
 
-          <div className="flex flex-col space-y-4 mt-6 mb-10 lg:flex-row lg:space-y-0 lg:space-x-4 lg:mt-0 lg:mb-0">
+          <div className="flex flex-col mt-6 mb-10 space-y-4 lg:flex-row lg:space-y-0 lg:space-x-8 lg:mt-0 lg:mb-0">
             {pages.map((page, index) => (
               <a key={index} href={page.link}>
                 {page.title}
@@ -238,23 +249,23 @@ function App() {
             ))}
           </div>
 
-          <div className="flex space-x-4 justify-center lg:row-start-1 lg:col-start-2 lg:justify-end">
+          <div className="flex justify-center space-x-4 lg:row-start-1 lg:col-start-2 lg:justify-end">
             <a href="#/">
               <img src={facebook} alt="Facebook" />
             </a>
             <a href="#/">
-              <img src={twitter} alt="Facebook" />
+              <img src={twitter} alt="Twitter" />
             </a>
             <a href="#/">
-              <img src={pinterest} alt="Facebook" />
+              <img src={pinterest} alt="Pinterest" />
             </a>
             <a href="#/">
-              <img src={instagram} alt="Facebook" />
+              <img src={instagram} alt="Instagram" />
             </a>
           </div>
 
-          <div className="mt-4 lg:mt-0 text-right">
-            <span className="text-gray-500 text-sm">
+          <div className="mt-4 text-center lg:text-right lg:mt-0">
+            <span className="text-sm text-gray-400">
               &copy; 2021 Loopstudios. All rights reserved.
             </span>
           </div>
